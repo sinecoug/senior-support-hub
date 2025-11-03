@@ -1,0 +1,16 @@
+site_name: Senior Support Hub
+nav:
+  - Home: index.md
+  - About NDLS online renewal: docs/concept-ndls-online-renewal.md
+  - Renewing your driving license online:
+      - Main Task: docs/renewing-driving-license-online.md
+      - Uploading a medical report: docs/uploading-medical-report.md
+      - Returning to a saved renewal: docs/returning-to-saved-renewal.md
+  - Reference:
+      - Medical and eyesight report requirements: docs/reference-ndls-medical-docs.md
+      - Vehicle categories: docs/reference-ndls-vehicle-categories.md
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: teal
