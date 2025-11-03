@@ -1,0 +1,9 @@
+# markdownlint configuration
+default: true
+MD013: false      # line length check (disable for readability)
+MD033: false      # allow inline HTML
+MD041: false      # allow multiple H1s in GitBook context
+MD024:
+  siblings_only: true
+MD007:
+  indent: 2
