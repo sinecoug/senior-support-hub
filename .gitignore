@@ -1,0 +1,104 @@
+# =========================================
+# 📘 Sinead Coughlan - Capstone Documentation Project
+# NDLS Online Renewal Knowledge Base
+# .gitignore Template (for GitBook / MkDocs / Oxygen / AI Tools)
+# =========================================
+
+# 🧾 General OS files
+.DS_Store
+Thumbs.db
+
+# 🧰 IDE / Editor metadata
+.vscode/
+.idea/
+*.code-workspace
+
+# 🧹 Build and temporary output directories
+_site/
+_site/*
+_site/**
+site/
+site/*
+site/**
+build/
+dist/
+temp/
+tmp/
+.cache/
+.cache-loader/
+node_modules/
+
+# 🧠 AI tooling and notebook artifacts
+__pycache__/
+*.ipynb_checkpoints
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# 🧩 Documentation build artifacts
+/public/
+output/
+export/
+archives/
+drafts/
+*.pdf
+*.docx
+*.odt
+*.zip
+
+# 🧱 DITA / Oxygen specific
+*.ditaval
+*.backup
+*.bak
+*.class
+*.dtd.cache
+*.jar
+*.xpr
+*.xpr.bak
+*.temp
+*.tmp
+*.iml
+*~.dita
+output/**
+
+# 🧭 MkDocs and GitBook build directories
+/.gitbook
+/.gitbook/** 
+/book
+/book/**
+/site
+/site/**
+/docs_build/
+/docs_build/**
+
+# ⚙️ Environment and configuration
+.env
+.env.local
+.env.*
+*.lock
+package-lock.json
+yarn.lock
+*.json.bak
+*.yml.bak
+
+# 🖼️ Image / Binary backups
+*.psd
+*.xcf
+*.tif
+*.tiff
+*.ai
+*.svg~
+*.png~
+*.jpg~
+*.jpeg~
+
+# ✅ Allow specific source folders (important!)
+!/docs/
+!/index.md
+!/SUMMARY.md
+!/README.md
+!.markdownlint.yml
+!mkdocs.yml
+!.gitignore
