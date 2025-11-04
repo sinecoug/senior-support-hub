@@ -73,6 +73,20 @@ output/**
 /docs_build/
 /docs_build/**
 
+# Python venv & caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# MkDocs build output
+site/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
 # ⚙️ Environment and configuration
 .env
 .env.local
