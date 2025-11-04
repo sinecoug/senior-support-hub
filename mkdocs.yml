@@ -1,16 +1,67 @@
 site_name: Senior Support Hub
-nav:
-  - Home: index.md
-  - About NDLS online renewal: docs/concept-ndls-online-renewal.md
-  - Renewing your driving license online:
-      - Main Task: docs/renewing-driving-license-online.md
-      - Uploading a medical report: docs/uploading-medical-report.md
-      - Returning to a saved renewal: docs/returning-to-saved-renewal.md
-  - Reference:
-      - Medical and eyesight report requirements: docs/reference-ndls-medical-docs.md
-      - Vehicle categories: docs/reference-ndls-vehicle-categories.md
+site_description: Practical, end-to-end guides for key eldercare workflows
+site_url: https://sinecoug.github.io/senior-support-hub/
+
+repo_name: sinecoug/senior-support-hub
+repo_url: https://github.com/sinecoug/senior-support-hub
+edit_uri: edit/main/docs/
+
 theme:
   name: material
+  custom_dir: docs/overrides
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - content.action.edit
+    - content.code.copy
+    - toc.integrate
+    - search.highlight
+    - search.suggest
   palette:
-    primary: blue
-    accent: teal
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - search
+  - sitemap
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+
+extra_css:
+  - styles/extra.css
+
+nav:
+  - Home: index.md
+  - NDLS:
+      - Overview: concepts/ndls_overview.md
+      - Reference:
+          - Licence categories: reference/licence_categories.md
+          - Accepted file formats: reference/accepted_file_formats.md
+      - Tasks:
+          - Renewing your driving licence online: tasks/renewing_driving_licence_online.md
+          - Uploading a medical report: tasks/uploading_medical_report.md
+          - Returning to a saved renewal: tasks/returning_to_saved_renewal.md
+  - About this project: about.md
+

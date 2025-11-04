@@ -1,0 +1,24 @@
+.footer-divider {
+    border: none;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .custom-footer a {
+    color: var(--md-accent-fg-color);
+    text-decoration: none;
+  }
+  .custom-footer a:hover {
+    text-decoration: underline;
+  }
+  .custom-header {
+    position: relative;
+    z-index: 20;
+  }
+  @media (max-width: 768px) {
+    .custom-header {
+      font-size: 0.8rem;
+      padding: 0.3rem;
+    }
+  }
+  
