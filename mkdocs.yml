@@ -1,8 +1,11 @@
 site_name: Senior Support Hub
 site_description: Practical, end-to-end guides for key eldercare workflows
-site_url: https://<your-username>.github.io/senior-support-hub/
+site_url: https://sinecoug.github.io/senior-support-hub/
+
+# ——— Theme: Material + Warm Care skin ———
 theme:
   name: material
+  custom_dir: ./overrides            # enables header/footer partials
   features:
     - navigation.sections
     - navigation.top
@@ -12,15 +15,30 @@ theme:
     - toc.integrate
     - search.highlight
     - search.suggest
+  font:
+    text: "Inter"
+    code: "JetBrains Mono"
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
-      accent: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
-      accent: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+# Custom CSS (readability/contrast/spacing for seniors)
+extra_css:
+  - styles/extra.css
+
+# ——— Markdown extensions ———
 markdown_extensions:
   - admonition
   - attr_list
@@ -35,20 +53,23 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.emoji:
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+# ——— Plugins (compatible with your env) ———
 plugins:
   - search
   - git-revision-date-localized:
       fallback_to_build_date: true
+
+# ——— Navigation (paths are relative to docs/) ———
 nav:
   - Home: index.md
   - NDLS:
       - Overview: concepts/ndls_overview.md
       - Reference:
-          - Licence categories: reference/vehicle_categories.md
+          - Licence categories: reference/licence_categories.md
           - Accepted file formats: reference/accepted_file_formats.md
       - Tasks:
-          - Renewing your driving licence online: tasks/renewing-driving-licence-online.md
-          - Obtaining a medical or eyesight report: tasks/obtaining-medical-or-eyesight-report.md
-          - Uploading a medical report: tasks/uploading-medical-report.md
-          - Returning to a saved renewal: tasks/returning-to-saved-renewal.md
-  - About this project: README.md
+          - Renewing your driving licence online: tasks/renewing_driving_licence_online.md
+          - Uploading a medical report: tasks/uploading_medical_report.md
+          - Returning to a saved renewal: tasks/returning_to_saved_renewal.md
+  - About this project: about.md
